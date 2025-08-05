@@ -21,7 +21,7 @@ const faqs = [
 
   {
     q: "How do I ape in?",
-    a: "Google how to buy pump.fun shitcoins"
+    a: "Press buy button"
   }
 ]
 
