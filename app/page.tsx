@@ -43,7 +43,7 @@ export default function Home() {
           <motion.h1 
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-8xl md:text-9xl crunchie-text mb-12 glow float"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl crunchie-text mb-12 glow float text-center px-4"
           >
             CRUNCHIE
           </motion.h1>
@@ -67,7 +67,7 @@ export default function Home() {
               href="https://pump.fun/YOUR_TOKEN_ADDRESS" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-yellow-300 crunchie-text py-8 px-12 rounded-xl text-3xl transition-all transform hover:scale-110 neon-border shadow-2xl animate-pulse border-4 border-orange-500"
+              className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-yellow-200 crunchie-text py-8 px-12 rounded-xl text-2xl md:text-3xl transition-all transform hover:scale-110 neon-border shadow-2xl animate-pulse border-4 border-orange-500 font-black"
               id="buy"
             >
               BUY $CRUNCH
