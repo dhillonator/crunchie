@@ -53,11 +53,8 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mb-16"
           >
-            <div className="text-4xl md:text-6xl crunchie-text mb-8 text-purple-800">
-              THE GOLDEN TOKEN
-            </div>
-            <div className="text-xl md:text-2xl text-purple-700 font-bold crunchie-text">
-              HONEYCOMB CRISPY GOODNESS 🍯
+            <div className="text-5xl md:text-7xl mb-8">
+              🦍💸🚀🎆🔥💪🪙🍕🍻🔮🎯💰🤑🎉
             </div>
           </motion.div>
           <motion.div 
@@ -79,7 +76,7 @@ export default function Home() {
               href="https://www.youtube.com/watch?v=nFZP8zQ5kzk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-700 hover:text-orange-500 transition-colors cursor-pointer underline font-bold crunchie-text text-xl"
+              className="text-purple-700 hover:text-orange-500 transition-colors cursor-pointer font-bold crunchie-text text-xl"
             >
               or stay poor forever
             </a>
