@@ -51,16 +51,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl crunchie-text mb-8 glow float"
           >
-            BUY $CRUNCH 🍯
+            CRUNCHIE
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8 text-purple-800 font-bold crunchie-text"
-          >
-            The crunchiest investment you'll make today (sweeter than honeycomb) 🍯
-          </motion.p>
           <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -74,7 +66,7 @@ export default function Home() {
               className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-yellow-300 crunchie-text py-6 px-10 rounded-xl text-2xl transition-all transform hover:scale-110 neon-border shadow-2xl animate-pulse border-4 border-orange-500"
               id="buy"
             >
-              🍯 GET CRUNCHY NOW 🍯
+              BUY $CRUNCH
             </a>
             <a 
               href="https://www.youtube.com/watch?v=nFZP8zQ5kzk"
@@ -92,7 +84,7 @@ export default function Home() {
       <section id="chart" className="py-20 px-4 bg-gradient-to-b from-yellow-300/20 to-orange-400/20">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl crunchie-text text-center mb-12 rainbow-text">
-            CHART (ONLY GOES UP) 📈
+            CHART (ONLY GOES UP)
           </h2>
           <div className="bg-yellow-200/30 backdrop-blur-sm rounded-xl p-6 neon-border shadow-2xl">
             <iframe 
