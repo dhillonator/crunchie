@@ -1,15 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-const memes = [
-  '/memes/meme1.gif',
-  '/memes/meme2.gif',
-  '/memes/meme3.gif'
-]
 
 const faqs = [
   {
@@ -39,54 +32,19 @@ const faqs = [
 ]
 
 export default function Home() {
-  const [currentMeme, setCurrentMeme] = useState(0)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    const interval = setInterval(() => {
-      setCurrentMeme((prev) => (prev + 1) % memes.length)
-    }, 3000)
-    return () => clearInterval(interval)
   }, [])
 
   if (!mounted) return null
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-green-500/30 shadow-lg shadow-green-500/10">
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex items-center space-x-2"
-          >
-            <Image src="/logo.png" alt="$CRUNCH" width={50} height={50} className="rounded-full shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transition-all duration-300 hover:scale-110" />
-            <span className="text-2xl font-bold rainbow-text hover:scale-105 transition-transform duration-300 cursor-pointer">$CRUNCH</span>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="hidden md:flex items-center space-x-6"
-          >
-            <a href="#buy" className="hover:text-green-400 transition-all duration-300 hover:scale-110 font-semibold">Buy</a>
-            <a href="#chart" className="hover:text-green-400 transition-all duration-300 hover:scale-110 font-semibold">Chart</a>
-            <Link href="/whitepaper" className="hover:text-green-400 transition-all duration-300 hover:scale-110 font-semibold">Whitepaper</Link>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-all duration-300 hover:scale-110 font-semibold">🐦</a>
-            <a href="#pump" className="hover:text-green-400 transition-all duration-300 hover:scale-110 font-semibold">Pump.fun</a>
-          </motion.div>
-          <motion.button 
-            initial={{ opacity: 0, rotate: -180 }}
-            animate={{ opacity: 1, rotate: 0 }}
-            className="md:hidden text-2xl hover:scale-110 transition-transform duration-300"
-          >🍔</motion.button>
-        </nav>
-      </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-20 px-4 money-rain relative overflow-hidden">
+      <section className="pt-20 pb-20 px-4 money-rain relative overflow-hidden">
         <div className="container mx-auto text-center relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: -50 }}
@@ -149,31 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meme Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">
-            PREMIUM MEMES 🎭
-          </h2>
-          <motion.div 
-            key={currentMeme}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="relative w-full max-w-2xl mx-auto h-[400px] bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden neon-border shadow-2xl hover:shadow-green-500/20 hover:scale-105 transition-all duration-300"
-          >
-            <Image 
-              src={memes[currentMeme]} 
-              alt="Degen meme" 
-              fill
-              className="object-contain transition-transform duration-300 hover:scale-110"
-            />
-          </motion.div>
-          <p className="mt-4 text-gray-400">
-            Curated by our team of professional shitposters
-          </p>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gray-900/20">
@@ -198,21 +131,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer with Pump.fun */}
-      <footer id="pump" className="py-20 px-4 border-t border-green-500/20">
+      {/* Footer */}
+      <footer className="py-20 px-4 border-t border-green-500/20">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 rainbow-text">
-            LIVE PUMP ACTION 📈
-          </h2>
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 neon-border shadow-2xl">
-              <iframe
-                src="https://pump.fun/YOUR_TOKEN_ADDRESS"
-                className="w-full h-[500px] rounded-lg border-2 border-green-500/20"
-                title="Pump.fun Trading"
-              />
-            </div>
-          </div>
           <div className="text-center space-y-4">
             <p className="text-xl rainbow-text font-bold">JOIN THE DEGEN ARMY 🪖</p>
             <div className="flex justify-center space-x-8">
