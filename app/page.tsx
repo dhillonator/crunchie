@@ -38,12 +38,12 @@ export default function Home() {
     <div className="min-h-screen crunchie-wrapper text-purple-900">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-32 px-4 honeycomb-bg relative overflow-hidden min-h-screen flex items-center">
+      <section className="pt-2 pb-32 px-4 honeycomb-bg relative overflow-hidden min-h-screen flex items-center">
         <div className="container mx-auto text-center relative z-10">
           <motion.h1 
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl crunchie-text mb-12 glow float text-center px-4"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl crunchie-text mb-4 glow float text-center px-4"
           >
             CRUNCHIE
           </motion.h1>
@@ -53,9 +53,11 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mb-16"
           >
-            <div className="text-5xl md:text-7xl mb-8">
-              🦍💸🚀🎆🔥💪🪙🍕🍻🔮🎯💰🤑🎉
-            </div>
+            <img
+              src="/crunchie.png"
+              alt="Crunchie"
+              className="mx-auto mb-8 w-80 md:w-[32rem] border-none"
+            />
           </motion.div>
           <motion.div 
             initial={{ scale: 0 }}
@@ -67,10 +69,10 @@ export default function Home() {
               href="https://pump.fun/YOUR_TOKEN_ADDRESS" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-yellow-200 crunchie-text py-8 px-12 rounded-xl text-2xl md:text-3xl transition-all transform hover:scale-110 neon-border shadow-2xl animate-pulse border-4 border-orange-500 font-black"
+              className="bg-yellow-300 hover:bg-yellow-400 text-purple-900 crunchie-text py-8 px-12 rounded-xl text-3xl md:text-4xl font-black transition-all transform hover:scale-110 neon-border shadow-2xl border-4 border-orange-500"
               id="buy"
             >
-              BUY $CRUNCH
+              BUY
             </a>
             <a 
               href="https://www.youtube.com/watch?v=nFZP8zQ5kzk"
@@ -140,17 +142,11 @@ export default function Home() {
                 className="text-4xl hover:text-green-400 transition-all duration-300 hover:drop-shadow-lg"
               >🐦</motion.a>
               <motion.a 
-                href="https://t.me" 
+                href="https://pump.fun/YOUR_TOKEN_ADDRESS"
                 whileHover={{ scale: 1.2, rotate: -5 }}
                 whileTap={{ scale: 0.9 }}
                 className="text-4xl hover:text-green-400 transition-all duration-300 hover:drop-shadow-lg"
-              >✈️</motion.a>
-              <motion.a 
-                href="https://discord.gg" 
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-4xl hover:text-green-400 transition-all duration-300 hover:drop-shadow-lg"
-              >💬</motion.a>
+              >💊</motion.a>
             </div>
             <p className="text-sm text-gray-500 mt-8">
               $CRUNCH is not a security, it's a lifestyle choice. DYOR (but you won't). NFA. WAGMI.

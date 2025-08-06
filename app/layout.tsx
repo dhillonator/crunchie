@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './global.css'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,9 +10,9 @@ export const metadata: Metadata = {
   description: 'Ape into $CRUNCH and become financially ruined! 🚀 WAGMI (probably not)',
   keywords: 'CRUNCH, Solana, meme coin, pump.fun, degen, crypto',
   openGraph: {
-    title: '$CRUNCH - Moon or McDonalds',
-    description: 'The ultimate shitcoin that will either make you rich or teach you a valuable lesson about gambling',
-    images: ['/logo.png'],
+    title: '$CRUNCH',
+    description: 'The best gamer on pump.fun until a better one joins',
+    images: ['/crunchie.png'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,6 +28,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* ...other head tags... */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-258XV85C4M"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-258XV85C4M');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} bg-black text-white overflow-x-hidden`}>
         {children}
       </body>
