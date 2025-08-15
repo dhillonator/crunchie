@@ -156,6 +156,69 @@
     50% { transform: translateX(50vw) translateY(-30px) rotate(180deg); }
     100% { transform: translateX(150vw) translateY(0px) rotate(360deg); }
   }
+  
+  /* Confetti animation for story endings */
+  .confetti {
+    font-size: 2rem;
+    animation: confetti-fall 3s ease-out infinite;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Enhanced mobile touch interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .hover\:scale-105:hover {
+      transform: none;
+    }
+    
+    .hover\:scale-110:hover {
+      transform: none;
+    }
+    
+    /* Better touch feedback */
+    button:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease;
+    }
+  }
+  
+  /* Improved text rendering on mobile */
+  @media (max-width: 640px) {
+    .crunchie-text {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Reduce shadow intensity on smaller screens */
+    .glow {
+      text-shadow: 0 0 10px rgba(255, 140, 0, 0.6),
+                   0 0 20px rgba(255, 215, 0, 0.4),
+                   0 0 30px rgba(255, 199, 44, 0.3),
+                   2px 2px 4px rgba(74, 26, 92, 0.6);
+    }
+    
+    .neon-border {
+      box-shadow: 0 0 10px rgba(255, 140, 0, 0.4),
+                  0 0 20px rgba(255, 215, 0, 0.3),
+                  inset 0 0 10px rgba(255, 199, 44, 0.1),
+                  inset 2px 2px 4px rgba(74, 26, 92, 0.2);
+    }
+  }
 }
 
 /* Crunchie-themed Scrollbar */
